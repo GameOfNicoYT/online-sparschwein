@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.balance {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.withdrawlMoney {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+}
+
+.balance :last-child {
+    margin-left: 10px;
+}
+
+.addBalance {
+    width: 85%;
+    margin: 25px 0;
+}
+
+.adBalanceCoin {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.addBalanceBill {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 60%;
+}
+
+.addBalanceSubDiv {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 15%;
+}
+
+.addBalanceSubDivBill {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 35%;
+}
+
+.Coin {
+    margin: auto;
+    width: 100%;
+}
+
+.Bill {
+    margin: auto;
+    width: 100%;
+}
