@@ -13,18 +13,49 @@
 </head>
 
 <body>
-    <a class="backButton" href="./index.html"><button>< Zurück</button></a>
+    <a class="backButton" href="./index.html"><button>
+            < Zurück</button></a>
     <div class="content">
         <div class="balance">
             <h2>Guthaben: </h2>
             <h2 id="Balance"></h2>
         </div>
         <div class="withdrawlMoney">
-            <label for="pw">PIN: </label>
-            <input id="pw" name="pw" type="password" maxlength="4">
-            <label for="amount">Betrag zum Abheben (IN EURO) : </label>
-            <input type="number" name="amount" id="amount">
-            <button onclick="WithdrawlMoney()">Abheben</button>
+            <div class="withdrawlMoneyPIN">
+                <label for="pw">PIN: </label>
+                <input id="pw" name="pw" type="password" maxlength="4" value="" disabled>
+                <div class="divTabellePINInput">
+                    <table class="tabellePINInput">
+                        <tbody>
+                            <tr>
+                                <td onclick="addNumberToPIN(7)">7</td>
+                                <td onclick="addNumberToPIN(8)">8</td>
+                                <td onclick="addNumberToPIN(9)">9</td>
+                            </tr>
+                            <tr>
+                                <td onclick="addNumberToPIN(4)">4</td>
+                                <td onclick="addNumberToPIN(5)">5</td>
+                                <td onclick="addNumberToPIN(6)">6</td>
+                            </tr>
+                            <tr>
+                                <td onclick="addNumberToPIN(1)">1</td>
+                                <td onclick="addNumberToPIN(2)">2</td>
+                                <td onclick="addNumberToPIN(3)">3</td>
+                            </tr>
+                            <tr>
+                                <td onclick="addNumberToPIN('DEL')">DELETE</td>
+                                <td onclick="addNumberToPIN(0)">0</td>
+                                <td onclick="addNumberToPIN('COR')">CORRECT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="withdrawlMoneyAmount">
+                <label for="amount">Betrag zum Abheben (IN EURO) : </label>
+                <input type="number" name="amount" id="amount">
+                <button onclick="WithdrawlMoney()">Abheben</button>
+            </div>
         </div>
     </div>
 </body>

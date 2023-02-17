@@ -5,6 +5,7 @@
 }
 
 body {
+    height: 100vh;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -25,7 +26,7 @@ body {
     display: none;
 }
 
-.backButton{
+.backButton {
     margin: 15px;
     width: 30%;
 }
@@ -40,6 +41,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 25px 0;
+    height: auto;
 }
 
 .balance :last-child {
@@ -51,16 +53,24 @@ body {
     margin: 25px 0;
 }
 
-@media(min-width: 900px){
-    .addBalance{
+@media(min-width: 900px) {
+    .addBalance {
         width: 80%;
+    }
+    .divTabellePINInput{
+        height: 100%;
     }
 }
 
-@media(min-width: 1100px){
-    .addBalance{
+@media(min-width: 1100px) {
+    .addBalance {
         width: 50%;
     }
+}
+
+.withdrawlMoneyPIN{
+    display: flex;
+    flex-direction: column;
 }
 
 .adBalanceCoin {
@@ -102,6 +112,31 @@ body {
     width: 100%;
 }
 
-.withdrawlMoney button, .withdrawlMoney label{
+#pw{
+    margin: auto;
+    width: 50%;
+}
+
+.withdrawlMoney button,
+.withdrawlMoney label {
     margin-top: 15px;
 }
+
+.tabellePINInput{
+    height: 100%;
+}
+.tabellePINInput td{
+    background: silver;
+    width: 80px;
+    height: 30px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.divTabellePINInput{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+

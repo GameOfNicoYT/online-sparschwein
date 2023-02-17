@@ -1,6 +1,7 @@
 const PWInput = document.getElementById("inputPW");
 const PWButton = document.getElementById("buttonPWSend");
 const buttonWithdrawl = document.getElementById("buttonWithdrawl")
+const pwInput = document.getElementById("pw")
 
 setInterval(() => {
 
@@ -29,6 +30,17 @@ PWButton.addEventListener("click", () => {
     }
 })
 
+function addNumberToPIN(number) {
+
+    if (number != 'DEL' && number != 'COR') { pwInput.value += String(number) }
+    else if (number == "DEL") {
+        pwInput.value = "";
+    }else if(number == "COR") {
+        pwInput.value = pwInput.value.substr(0, pwInput.value.length - 1);
+    }
+
+}
+
 function WithdrawlMoney() {
     console.log("BUTTON CLICK")
     let pwInput = document.getElementById("pw").value
@@ -46,11 +58,14 @@ function WithdrawlMoney() {
             document.getElementById("pw").value = ""
             document.getElementById("amount").value = ""
         }
+    } else {
+        document.getElementById("pw").value = ""
+        document.getElementById("amount").value = ""
+        window.alert("Falscher PIN!")
     }
 }
 
 function addBalance(amount) {
-
     let balance = localStorage.getItem("balance")
     let tempBalance = parseInt(balance) + amount
     localStorage.setItem("balance", tempBalance)
