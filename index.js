@@ -3,8 +3,6 @@ const PWButton = document.getElementById("buttonPWSend");
 const buttonWithdrawl = document.getElementById("buttonWithdrawl")
 const pwInput = document.getElementById("pw")
 
-lockAllowed = window.screen.lockOrientation("portrait");
-
 setInterval(() => {
 
     let balance = localStorage.getItem("balance")
