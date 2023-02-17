@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (max-width: 900px) and (orientation: landscape) {
     html {
         display: none;
     }
