@@ -101,3 +101,7 @@ body {
     margin: auto;
     width: 100%;
 }
+
+.withdrawlMoney button, .withdrawlMoney label{
+    margin-top: 15px;
+}
