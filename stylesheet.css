@@ -9,6 +9,7 @@ body {
     align-items: start;
     justify-content: center;
     overflow: hidden;
+    flex-direction: column;
 }
 
 .content {
