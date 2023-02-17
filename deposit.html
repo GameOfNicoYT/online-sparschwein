@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,64 @@
     <link rel="manifest" href="webmanifest.json">
     <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-    
+    <a class="backButton" href="./index.html"><button>< Zurück</button></a>
+    <div class="content" id="content">
+        <div class="balance">
+            <h2>Guthaben: </h2>
+            <h2 id="Balance"></h2>
+        </div>
+        <div class="addBalance">
+            <div class="adBalanceCoin">
+                <div class="addBalanceSubDiv" id="oneCent" onclick="addBalance(1)">
+                    <img class="Coin" src="./src/1_Cent.png" alt="1 CENT">
+                </div>
+                <div class="addBalanceSubDiv" id="twoCent" onclick="addBalance(2)">
+                    <img class="Coin" src="./src/2_Cent.png" alt="2 CENT">
+                </div>
+                <div class="addBalanceSubDiv" id="fiveCent" onclick="addBalance(5)">
+                    <img class="Coin" src="./src/5_Cent.png" alt="5 CENT">
+                </div>
+                <div class="addBalanceSubDiv" id="tenCent" onclick="addBalance(10)">
+                    <img class="Coin" src="./src/10_Cent.png" alt="10 CENT">
+                </div>
+                <div class="addBalanceSubDiv" id="twentyCent" onclick="addBalance(20)">
+                    <img class="Coin" src="./src/20_Cent.png" alt="20 CENT">
+                </div>
+                <div class="addBalanceSubDiv" id="fiftyCent" onclick="addBalance(50)">
+                    <img class="Coin" src="./src/50_Cent.png" alt="50 CENT">
+                </div>
+                <div class="addBalanceSubDiv" id="oneEuro" onclick="addBalance(100)">
+                    <img class="Coin" src="./src/1_Euro.png" alt="1 Euro">
+                </div>
+                <div class="addBalanceSubDiv" id="twoEuro" onclick="addBalance(200)">
+                    <img class="Coin" src="./src/2_Euro.png" alt="2 Euro">
+                </div>
+            </div>
+            <div class="addBalanceBill">
+                <div class="addBalanceSubDivBill" id="fiveEuro" onclick="addBalance(500)">
+                    <img class="Bill" src="./src/5_Euro.png" alt="5 Euro">
+                </div>
+                <div class="addBalanceSubDivBill" id="tenEuro" onclick="addBalance(1000)">
+                    <img class="Bill" src="./src/10_Euro.png" alt="10 Euro">
+                </div>
+                <div class="addBalanceSubDivBill" id="twentyEuro" onclick="addBalance(2000)">
+                    <img class="Bill" src="./src/20_Euro.png" alt="20 Euro">
+                </div>
+                <div class="addBalanceSubDivBill" id="fiftyEuro" onclick="addBalance(5000)">
+                    <img class="Bill" src="./src/50_Euro.png" alt="50 Euro">
+                </div>
+                <div class="addBalanceSubDivBill" id="hundretEuro" onclick="addBalance(10000)">
+                    <img class="Bill" src="./src/100_Euro.png" alt="100 Euro">
+                </div>
+                <div class="addBalanceSubDivBill" id="twoHundretEuro" onclick="addBalance(20000)">
+                    <img class="Bill" src="./src/200_Euro.png" alt="200 Euro">
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>

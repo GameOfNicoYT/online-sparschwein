@@ -12,7 +12,7 @@ setInterval(() => {
 if (localStorage.getItem("PW") != null) {
     console.log("PW IS SET")
     document.getElementById("enterFirstPW").style.display = "none"
-    document.getElementById("content").style.display = "flex"
+    document.getElementById("contentMain").style.display = "flex"
 }
 
 if (localStorage.getItem("balance") == null) {
@@ -28,7 +28,7 @@ PWButton.addEventListener("click", () => {
     }
 })
 
-buttonWithdrawl.addEventListener("click", () => {
+function WithdrawlMoney() {
     console.log("BUTTON CLICK")
     let pwInput = document.getElementById("pw").value
     let withdrawl = (document.getElementById("amount").value) * 100
@@ -46,7 +46,7 @@ buttonWithdrawl.addEventListener("click", () => {
             document.getElementById("amount").value = ""
         }
     }
-})
+}
 
 function addBalance(amount) {
 
