@@ -25,6 +25,7 @@ PWButton.addEventListener("click", () => {
     } else {
         console.log("PW SET")
         localStorage.setItem("PW", PWInput.value)
+        location.reload();
     }
 })
 
