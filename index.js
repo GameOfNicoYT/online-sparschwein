@@ -3,6 +3,16 @@ const PWButton = document.getElementById("buttonPWSend");
 const buttonWithdrawl = document.getElementById("buttonWithdrawl")
 const pwInput = document.getElementById("pw")
 
+function checkOrientation() {
+    if (window.innerWidth > window.innerHeight) {
+      alert("Bitte drehen Sie Ihr Gerät in den Portrait-Modus");
+    }
+  }
+  window.addEventListener("orientationchange", function() {
+    checkOrientation();
+  });
+  checkOrientation();
+
 setInterval(() => {
 
     let balance = localStorage.getItem("balance")
