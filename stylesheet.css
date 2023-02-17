@@ -4,6 +4,18 @@
     text-align: center;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+}
+
 body {
     height: 100vh;
     display: flex;
@@ -57,7 +69,8 @@ body {
     .addBalance {
         width: 80%;
     }
-    .divTabellePINInput{
+
+    .divTabellePINInput {
         height: 100%;
     }
 }
@@ -68,7 +81,7 @@ body {
     }
 }
 
-.withdrawlMoneyPIN{
+.withdrawlMoneyPIN {
     display: flex;
     flex-direction: column;
 }
@@ -112,7 +125,7 @@ body {
     width: 100%;
 }
 
-#pw{
+#pw {
     margin: auto;
     width: 50%;
 }
@@ -122,10 +135,11 @@ body {
     margin-top: 15px;
 }
 
-.tabellePINInput{
+.tabellePINInput {
     height: 100%;
 }
-.tabellePINInput td{
+
+.tabellePINInput td {
     background: silver;
     width: 80px;
     height: 30px;
@@ -133,10 +147,9 @@ body {
     cursor: pointer;
 }
 
-.divTabellePINInput{
+.divTabellePINInput {
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 10px;
 }
-
