@@ -3,6 +3,8 @@ const PWButton = document.getElementById("buttonPWSend");
 const buttonWithdrawl = document.getElementById("buttonWithdrawl")
 const pwInput = document.getElementById("pw")
 
+lockAllowed = window.screen.lockOrientation("portrait");
+
 setInterval(() => {
 
     let balance = localStorage.getItem("balance")
@@ -35,7 +37,7 @@ function addNumberToPIN(number) {
     if (number != 'DEL' && number != 'COR') { pwInput.value += String(number) }
     else if (number == "DEL") {
         pwInput.value = "";
-    }else if(number == "COR") {
+    } else if (number == "COR") {
         pwInput.value = pwInput.value.substr(0, pwInput.value.length - 1);
     }
 
