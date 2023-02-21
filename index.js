@@ -1,6 +1,5 @@
 const PWInput = document.getElementById("inputPW");
 const PWButton = document.getElementById("buttonPWSend");
-const pwInput = document.getElementById("pw")
 
 function checkOrientation() {
     if ((window.innerWidth > window.innerHeight) && window.innerWidth < 900) {

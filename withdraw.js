@@ -1,5 +1,5 @@
 const buttonWithdrawl = document.getElementById("buttonWithdrawl")
-
+const pwInput = document.getElementById("pw")
 
 function checkOrientation() {
     if ((window.innerWidth > window.innerHeight) && window.innerWidth < 900) {
