@@ -41,12 +41,12 @@ PWButton.addEventListener("click", () => {
     }
 })
 
-function addNumberToPIN(number) {
+function addNumberToPIN(cent) {
 
-    if (number != 'DEL' && number != 'COR') { pwInput.value += String(number) }
-    else if (number == "DEL") {
+    if (cent != 'DEL' && cent != 'COR') { pwInput.value += String(cent) }
+    else if (cent == "DEL") {
         pwInput.value = "";
-    } else if (number == "COR") {
+    } else if (cent == "COR") {
         pwInput.value = pwInput.value.substr(0, pwInput.value.length - 1);
     }
 
