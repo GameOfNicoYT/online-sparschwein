@@ -22,6 +22,14 @@ function addNumberToPIN(number) {
 
 }
 
+
+setInterval(() => {
+
+    let balance = localStorage.getItem("balance")
+    document.getElementById("Balance").innerHTML = balance / 100 + " Euro"
+
+}, 500);
+
 document.addEventListener("keydown", function(event) {
     if (event.key === "Enter" || event.keyCode === 13) {
       WithdrawMoney()
