@@ -24,6 +24,7 @@ if (localStorage.getItem("PW") != null) {
     console.log("PW IS SET")
     document.getElementById("enterFirstPW").style.display = "none"
     document.getElementById("contentMain").style.display = "flex"
+    document.getElementById("navBarID").style.display = "flex"
 }
 
 if (localStorage.getItem("balance") == null) {
