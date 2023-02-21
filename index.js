@@ -1,6 +1,16 @@
 const PWInput = document.getElementById("inputPW");
 const PWButton = document.getElementById("buttonPWSend");
 
+setInterval(() => {
+    let zeit = window.localStorage.getItem("hint")
+    if(zeit <= 0 || zeit === "false"){
+        document.getElementById("hint").style.display = "none"
+        window.localStorage.setItem("hint", "false")
+    } else{
+        window,localStorage.setItem("hint", parseInt(zeit)-1)
+    }
+}, 1000);
+
 function checkOrientation() {
     if ((window.innerWidth > window.innerHeight) && window.innerWidth < 900) {
         alert("Bitte drehen Sie Ihr Gerät in den Portrait-Modus");
@@ -23,6 +33,9 @@ if (localStorage.getItem("PW") != null) {
     document.getElementById("enterFirstPW").style.display = "none"
     document.getElementById("contentMain").style.display = "flex"
     document.getElementById("navBarID").style.display = "flex"
+
+} else{
+    window.localStorage.setItem("hint", "120")
 }
 
 if (localStorage.getItem("balance") == null) {
@@ -38,6 +51,4 @@ PWButton.addEventListener("click", () => {
         location.reload();
     }
 })
-
-
 

@@ -13,33 +13,38 @@
 </head>
 
 <body>
-
-    <div class="navBar" id="navBarID">
-        <h1>Sparschwein</h1>
-        <div class="links">
-            <a href="./deposit.html">Einzahlen</a>
-            <a href="./withdraw.html">Auszahlen</a>
+    <div class="wrapper">
+        <div class="navBar" id="navBarID">
+            <h1>Sparschwein</h1>
+            <div class="links">
+                <a href="./deposit.html">Einzahlen</a>
+                <a href="./withdraw.html">Auszahlen</a>
+            </div>
         </div>
-    </div>
 
-    <div id="enterFirstPW" class="enterFirstPW">
-        <h3>
-            Gib bitte einen 4-Stellingen PIN ein um unerlaubtes Abheben zu verhindern.
-        </h3>
-        <p>
-            Bitte gib keine Vertraulichen PINs hier ein und gib diesen PIN nicht weiter
-        </p>
-        <input id="inputPW" type="number">
-        <button id="buttonPWSend">Absenden</button>
-    </div>
-    <div class="content" id="contentMain">
-        <div class="balance">
-            <h2>Guthaben: </h2>
-            <h2 id="Balance"></h2>
+        <div id="enterFirstPW" class="enterFirstPW">
+            <h3>
+                Gib bitte einen 4-Stellingen PIN ein um unerlaubtes Abheben zu verhindern.
+            </h3>
+            <p>
+                Bitte gib keine Vertraulichen PINs hier ein und gib diesen PIN nicht weiter
+            </p>
+            <input id="inputPW" type="number">
+            <button id="buttonPWSend">Absenden</button>
         </div>
-        <div class="selection">
-            <a href="./deposit.html"><button>Geld Einzahlen</button></a>
-            <a href="./withdraw.html"><button>Geld Auszahlen</button></a>
+        <div class="content" id="contentMain">
+            <div class="balance">
+                <h2>Guthaben: </h2>
+                <h2 id="Balance"></h2>
+            </div>
+            <div class="selection">
+                <a href="./deposit.html"><button>Geld Einzahlen</button></a>
+                <a href="./withdraw.html"><button>Geld Auszahlen</button></a>
+            </div>
+        </div>
+        <div id="hint" class="hint">
+            <p>Bitte Speichere diese App auf den Homebildschirm, da bei IPhones sonst die Daten gelöscht werden und du alles wieder neu einstellen musst!</p>
+            <p style="margin-bottom: 30px;">Alternativ kannst du auch in den öffentlichen Tabs navigieren und die Privaten schließen, bzw. das automatische Löschen von Browserdaten deaktivieren!</p>
         </div>
     </div>
 </body>

@@ -11,6 +11,10 @@ window.addEventListener("orientationchange", function () {
 });
 checkOrientation();
 
+document.addEventListener("scroll", function (event) {
+    event.preventDefault();
+}, { passive: false });
+
 function addNumberToPIN(number) {
 
     if (number != 'DEL' && number != 'COR') { pwInput.value += String(number) }
@@ -22,6 +26,20 @@ function addNumberToPIN(number) {
 
 }
 
+if (window.localStorage.getItem("hint") === null) {
+    window.localStorage.setItem("hint", "120")
+}  
+
+setInterval(() => {
+    let zeit = window.localStorage.getItem("hint")
+    if(zeit <= 0 || zeit === "false"){
+        document.getElementById("hint").style.display = "none"
+        window.localStorage.setItem("hint", "false")
+    } else{
+        window,localStorage.setItem("hint", parseInt(zeit)-1)
+    }
+}, 1000);
+
 
 setInterval(() => {
 
@@ -30,12 +48,12 @@ setInterval(() => {
 
 }, 500);
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
     if (event.key === "Enter" || event.keyCode === 13) {
-      WithdrawMoney()
+        WithdrawMoney()
     }
-  });
-  
+});
+
 
 function WithdrawMoney() {
     console.log("BUTTON CLICK")
