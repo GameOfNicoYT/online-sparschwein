@@ -11,6 +11,17 @@ window.addEventListener("orientationchange", function () {
 });
 checkOrientation();
 
+function addNumberToPIN(number) {
+
+    if (number != 'DEL' && number != 'COR') { pwInput.value += String(number) }
+    else if (number == "DEL") {
+        pwInput.value = "";
+    } else if (number == "COR") {
+        pwInput.value = pwInput.value.substr(0, pwInput.value.length - 1);
+    }
+
+}
+
 function WithdrawlMoney() {
     console.log("BUTTON CLICK")
     let pwInput = document.getElementById("pw").value

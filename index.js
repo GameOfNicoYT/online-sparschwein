@@ -40,14 +40,5 @@ PWButton.addEventListener("click", () => {
     }
 })
 
-function addNumberToPIN(number) {
 
-    if (number != 'DEL' && number != 'COR') { pwInput.value += String(number) }
-    else if (number == "DEL") {
-        pwInput.value = "";
-    } else if (number == "COR") {
-        pwInput.value = pwInput.value.substr(0, pwInput.value.length - 1);
-    }
-
-}
 
