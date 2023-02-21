@@ -22,7 +22,14 @@ function addNumberToPIN(number) {
 
 }
 
-function WithdrawlMoney() {
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter" || event.keyCode === 13) {
+      WithdrawMoney()
+    }
+  });
+  
+
+function WithdrawMoney() {
     console.log("BUTTON CLICK")
     let pwInput = document.getElementById("pw").value
     let withdrawl = (document.getElementById("amount").value) * 100
